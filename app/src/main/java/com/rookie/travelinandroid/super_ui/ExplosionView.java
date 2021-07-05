@@ -8,11 +8,11 @@ import androidx.annotation.Nullable;
 
 public class ExplosionView extends View {
     public ExplosionView(Context context) {
-        super(context);
+        this(context,null);
     }
 
     public ExplosionView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs,0);
     }
 
     public ExplosionView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
