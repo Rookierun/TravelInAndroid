@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".super_algorithm.AlgorithmActivity" />
+        <activity android:name=".super_flutter.FlutterActivity" />
+        <activity android:name=".super_kotlin.KotlinActivity" />
+        <activity android:name=".super_ndk.NdkActivity" />
+        <activity android:name=".super_performance.PerformanceActivity" />
+        <activity android:name=".super_structure.StructureActivity" />
+        <activity android:name=".super_ui.UIActivity" />
     </application>
 
 </manifest>
