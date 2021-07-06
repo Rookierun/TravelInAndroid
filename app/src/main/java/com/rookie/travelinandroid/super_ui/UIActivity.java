@@ -11,6 +11,6 @@ public class UIActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(new ScratchCardView(this));
+        setContentView(R.layout.layout_loadding);
     }
 }
