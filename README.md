@@ -4,7 +4,10 @@
 ## 07-05. 
 ### 1。刮刮卡xfermode. 
 ### 2。粒子爆炸特效. 
-### 3。canvas的 translate与scale，save和restore. 
+### 3。canvas的 translate与scale，save和restore.
+## 07-06.
+### Canvas实际案例操作
+### 贝塞尔曲线与计算规则
 # 二。架构知识：2021-08-01～2021-08-31. 
 
 # 三。性能优化：2021-09-01～2021-09-30. 
