@@ -10,6 +10,31 @@
 ### 贝塞尔曲线与计算规则
 ## 07-07
 ### 事件传递机制的详解
+    1。涉及到的类
+    Activity->PhoneWindow->DecorView->ViewGroup->View
+    2。涉及到的方法
+    dispatchTouchEvent/onInterceptTouchEvent/requestDisallowTouchEvent/onTouchEvent
+    3。逻辑
+        3.1ViewGroup
+            public boolean dispatchTouchEvent(MotionEvent event){
+                boolean consumed=false;
+                if(onInterceptTouchEvent(event)){
+                    consumed=onTouchEvent(event);
+                }else{
+                    consumed=child.dispatchTouchEvent(event);
+                }
+                return consumed;
+            }
+        3.2View
+        onTouchListener.onTouch()如果return true，则onTouchEvent不再执行，也就是onTouch方法优先级高于onTouchEvent
+        onLongClick如果返回为false，那么onClick可以得到执行
+        Disable的View也可以消费事件
+        某个View一旦开始处理时间，如果它不消耗ACTION_DOWN事件，也就是onTouchEvent返回false，那么同一事件序列中的其他事件都不会再交给这个view处理了，
+        并且重新交由它的父元素处理（父元素的onTouchEvent被调用）
+        View的enable属性不影响onTouchEvent的默认返回值，哪怕一个View是disabled状态的，只要他的clickable/longClickable有一个为true，那么它的onTouchEvent就返回true
+        onClick得到响应的前提是View可点击的，并且收到了ACTION_DOWN和ACTION_UP事件，并且受长按事件的影响，长按事件返回为true时，onClick不会响应
+        onLongClick在ACTION_DOWN里判断是否进行响应，要想执行长按事件，那么该view必须是longClickable并设置了OnLongClickListener
+
 ### 属性动画分析
 ### 平行动画
 # 二。架构知识：2021-08-01～2021-08-31. 
