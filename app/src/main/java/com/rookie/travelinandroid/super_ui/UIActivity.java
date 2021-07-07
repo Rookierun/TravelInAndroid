@@ -2,8 +2,7 @@ package com.rookie.travelinandroid.super_ui;
 
 import android.os.Bundle;
 
-import com.rookie.travelinandroid.R;
-import com.rookie.travelinandroid.super_ui.animator.ProvinceView;
+import com.rookie.travelinandroid.super_ui.animator.custom_typeevaluator.ProvinceView;
 
 import androidx.appcompat.app.AppCompatActivity;
 

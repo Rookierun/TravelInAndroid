@@ -1,4 +1,4 @@
-package com.rookie.travelinandroid.super_ui.animator;
+package com.rookie.travelinandroid.super_ui.animator.custom_typeevaluator;
 
 import android.animation.TypeEvaluator;
 

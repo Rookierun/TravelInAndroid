@@ -1,4 +1,4 @@
-package com.rookie.travelinandroid.super_ui.animator;
+package com.rookie.travelinandroid.super_ui.animator.custom_typeevaluator;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -6,9 +6,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
-
-import java.util.Arrays;
-import java.util.List;
 
 import androidx.annotation.Nullable;
 
