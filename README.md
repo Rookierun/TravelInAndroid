@@ -36,6 +36,8 @@
         onLongClick在ACTION_DOWN里判断是否进行响应，要想执行长按事件，那么该view必须是longClickable并设置了OnLongClickListener
 
 ### 属性动画分析
+    1。原理
+    实际上，通过一个线程每隔一段时间，通过调用view.setXXX()值，这也是属性动画的原理
 ### 平行动画
 # 二。架构知识：2021-08-01～2021-08-31. 
 
