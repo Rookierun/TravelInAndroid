@@ -255,12 +255,28 @@
 ## 文字的测量和几何变换
 ### 文字的测量与绘制
     1。文字的居中测量
+        paint.getTextBonds()
+        paint.getFontMetrics()
     2。文字的左对齐
+        rect.left
     3。文字的换行
+        1.StaticLayout(text,TextPaint,width,Align,)
+        2.breakText()
 ### canvas的变换
     1。canvas的范围裁切
+        canvas.clipRect()
+        canvas.clipOutRect()
+        canvas.clipPath(),被切掉的部分由毛边
     2。canvas的几何变换
+        canvas.translate()
+        canvas.rotate()
+        canvas.scale()
+        canvas.skew()
     3。Matrix的几何变换
+        preTranslate/postTranslate
+        preRotate/postRotate
+        preScale/postScale
+        preSkew/postSkew
     4。使用Camera做三维旋转
 # 二。架构知识：2021-08-01～2021-08-31. 
 
