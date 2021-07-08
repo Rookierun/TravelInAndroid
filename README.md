@@ -278,6 +278,10 @@
         preScale/postScale
         preSkew/postSkew
     4。使用Camera做三维旋转
+## Bitmap 和 Drawable，以及手写 MaterialEditText
+    ### Bitmap To Drawable
+    ### Drawable To Bitmap
+    ### MaterialEditText
 # 二。架构知识：2021-08-01～2021-08-31. 
 
 # 三。性能优化：2021-09-01～2021-09-30. 
