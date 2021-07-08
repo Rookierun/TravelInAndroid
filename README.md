@@ -43,6 +43,16 @@
 ### 平行动画
 ## 07-08
 ### 刻度表
+    1.画弧形
+        canvas.drawArc(RectF,startAngle,sweepAngle,useCenter,Paint);
+        canvas.drawArc(left,top,right,bottom,startAngle,sweepAngle,useCenter,Paint);
+        画弧形时，需要给canvas一个具体的矩形的绘制范围区域，其中，矩形的中心点即为圆弧的圆心，useCenter的参数为true时，表示绘制圆心到圆弧之间的区域
+    2.画刻度
+        画刻度时，使用了paint.setEffectPath(PathDashPathEffect)方法
+        PathDashPathEffect(Path shape, float advance, float phase, Style style)。虚线类型的Path，其中可以通过 arg1：shape指定虚线的形状
+        需要注意的是，setPath后，会把之前的弧形清除，所以需要把原来的弧形画完后，再setEffectPath,并在画完后，将此置为null
+    3.画指针
+        画指针时，需要注意指针stopX，stopY的计算，此处借助了Math.toRadians()将角度转换为弧度，然后再计算cos/sin
 ### 饼状图
 ### 原形头像
 # 二。架构知识：2021-08-01～2021-08-31. 
