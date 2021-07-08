@@ -1,4 +1,4 @@
-package com.rookie.travelinandroid.super_ui;
+package com.rookie.travelinandroid.super_ui.custom_view;
 
 public class ExplodedBall {
     public float radius;//半径

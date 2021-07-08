@@ -1,4 +1,4 @@
-package com.rookie.travelinandroid.super_ui;
+package com.rookie.travelinandroid.super_ui.custom_view;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -10,7 +10,7 @@
         android:text="你好"
         android:textSize="30dp" />
 
-    <com.rookie.travelinandroid.super_ui.LoadingView
+    <com.rookie.travelinandroid.super_ui.custom_view.LoadingView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </RelativeLayout>

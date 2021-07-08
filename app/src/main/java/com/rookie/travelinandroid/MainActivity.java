@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.rookie.travelinandroid.super_ui.ExplosionView;
 import com.rookie.travelinandroid.super_ui.UIActivity;
 
 public class MainActivity extends AppCompatActivity {

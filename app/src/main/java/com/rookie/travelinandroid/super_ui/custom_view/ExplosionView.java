@@ -1,4 +1,4 @@
-package com.rookie.travelinandroid.super_ui;
+package com.rookie.travelinandroid.super_ui.custom_view;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
