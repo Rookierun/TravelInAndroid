@@ -288,6 +288,7 @@
         3.涉及到android.view.LayoutInflater.Factory2的功能：
             1。小红书的平行动画
             2。防止重复点击
+                思路就是通过设置Factory，然后替换view的创建，并重写onClick的执行逻辑com.rookie.travelinandroid.super_structure.click.FilterClickListener
             3。动态换肤通用做法
             4。动态换肤扩展性的做法
                 1.内置皮肤资源
