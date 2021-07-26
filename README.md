@@ -278,9 +278,23 @@
         preScale/postScale
         preSkew/postSkew
     4。使用Camera做三维旋转
+## 图片的缩放与拖动
+    ### ScalableImageView
 # 二。架构知识：2021-08-01～2021-08-31. 
-
-# 三。性能优化：2021-09-01～2021-09-30. 
+## 07-26
+    ### 手写动态换肤框架及高可扩展性换肤应用回放
+        1.registerActivityLifecycleCallbacks执行在Activity.setContentView之前
+        2.registerActivityLifecycleCallbacks执行在Activity.onCreate之后
+        3.涉及到android.view.LayoutInflater.Factory2的功能：
+            1。小红书的平行动画
+            2。防止重复点击
+            3。动态换肤通用做法
+            4。动态换肤扩展性的做法
+                1.内置皮肤资源
+                    主要思路就是在BaseActivity设置LayoutInflater.Factory，告诉系统使用我们自己的factory.createView方法，然后自定义
+                    CustomAppCompatViewInflater继承自AppCompatViewInflater，通过拦截对应的tag，完成对指定view的换肤
+        4。mfactorySet置为false
+# 三。性能优化：2021-09-01～2021-09-30.
 
 # 四。ndk：2021-10-01～2021-11-15. 
 
