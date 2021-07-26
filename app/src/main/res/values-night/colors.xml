@@ -11,8 +11,8 @@
     <color name="blue">#00C6FF</color>
     <color name="green">#00E099</color>
     <color name="pink">#FF3892</color>
-    <color name="commonTextColor">#008577</color>
-    <color name="commonBackgroundColor">#ffffff</color>
+    <color name="commonTextColor">#3f51b5</color>
+    <color name="commonBackgroundColor">#000000</color>
     <array name="splash_circle_colors">
         <item>@color/blue</item>
         <item>@color/green</item>
