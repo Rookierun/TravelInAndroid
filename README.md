@@ -287,6 +287,7 @@
         2.registerActivityLifecycleCallbacks执行在Activity.onCreate之后
         3.涉及到android.view.LayoutInflater.Factory2的功能：
             1。小红书的平行动画
+                思路就是设置Factory2，重写onCreateView拿到对应的attr，然后再通过属性动画改变期动画效果
             2。防止重复点击
                 思路就是通过设置Factory，然后替换view的创建，并重写onClick的执行逻辑com.rookie.travelinandroid.super_structure.click.FilterClickListener
             3。动态换肤通用做法
