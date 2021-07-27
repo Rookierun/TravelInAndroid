@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.rookie.skin_lib.R;
+import com.rookie.skin_lib.SkinManager;
 import com.rookie.skin_lib.core.ViewsMatch;
 import com.rookie.skin_lib.model.AttrsBean;
 
@@ -36,8 +37,22 @@ public class SkinnableTextView extends AppCompatTextView implements ViewsMatch {
         int key = R.styleable.SkinnableTextView[R.styleable.SkinnableTextView_android_background];
         int backgroundResourceId = attrsBean.getViewResource(key);
         if (backgroundResourceId > 0) {
-            Drawable drawable = ContextCompat.getDrawable(getContext(), backgroundResourceId);
-            setBackground(drawable);
+            if (SkinManager.getInstance().isDefaultSkin()) {
+                //使用内置的资源
+                Drawable drawable = ContextCompat.getDrawable(getContext(), backgroundResourceId);
+                setBackground(drawable);
+
+            } else {
+                //使用皮肤资源
+                Object o = SkinManager.getInstance().getBgOrSrc(backgroundResourceId);
+                if (o instanceof Integer) {
+                    setBackgroundColor(((Integer) o));
+                } else if (o instanceof Drawable) {
+
+                    setBackground(((Drawable) o));
+                }
+            }
+
         }
         key = R.styleable.SkinnableTextView[R.styleable.SkinnableTextView_android_textColor];
         int textColorResourceId = attrsBean.getViewResource(key);

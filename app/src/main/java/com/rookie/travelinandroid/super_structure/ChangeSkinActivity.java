@@ -1,17 +1,15 @@
 package com.rookie.travelinandroid.super_structure;
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 
-import com.rookie.skin_lib.SkinActivity;
+import com.rookie.skin_lib.base.DayOrNightSkinActivity;
 import com.rookie.travelinandroid.R;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-public class ChangeSkinActivity extends SkinActivity {
+public class ChangeSkinActivity extends DayOrNightSkinActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.rookie.skin_lib;
+package com.rookie.skin_lib.base;
 
 import android.content.Context;
 import android.os.Build;

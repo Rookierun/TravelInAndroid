@@ -1,9 +1,9 @@
 package com.rookie.skin_lib.utils;
 
-import com.rookie.skin_lib.DayOrNightSkinActivity;
+import android.app.Activity;
 
 public class StatusBarUtil {
-    public static void forStatusBar(DayOrNightSkinActivity dayOrNightSkinActivity) {
+    public static void forStatusBar(Activity dayOrNightSkinActivity) {
 
     }
 }
