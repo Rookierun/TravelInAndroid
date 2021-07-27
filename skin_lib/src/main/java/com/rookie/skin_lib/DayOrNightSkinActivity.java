@@ -20,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.view.LayoutInflaterCompat;
 
-public class SkinActivity extends AppCompatActivity {
+public class DayOrNightSkinActivity extends AppCompatActivity {
     private CustomAppCompatViewInflater viewInflater;
 
     @Override
