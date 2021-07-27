@@ -17,7 +17,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="10dp"
             android:background="@color/green"
-
+            android:gravity="center"
             android:onClick="startUI"
             android:text="看看UI"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -26,14 +26,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:background="@color/green"
-
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginTop="10dp"
+            android:background="@color/green"
+            android:gravity="center"
             android:onClick="startStructure"
             android:text="学学架构"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
