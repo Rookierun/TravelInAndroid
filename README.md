@@ -298,25 +298,24 @@
                 2。加载apk中的皮肤包资源
                     主要思路就是将apk中的资源，通过反射调用addAssetPath方法后，加入到Resource中，以便app可以访问到对应的资源文件
         4。mfactorySet置为false
-## 07-26
 ## 热门开源库源码分析
     ### 网络
             Retrofit
             OKHttp
-    ### 2。数据库
+    ### 数据库
             GreenDao
-    ### 3。图片
+    ### 图片
             Glide
             Picasso
             Fresco
-    ### 4。依赖注入
+    ### 依赖注入
             ButterKnife
             Dagger2
-    ### 5。事件总线
+    ### 事件总线
             EventBus
-    ### 6。响应式编程
+    ### 响应式编程
              RXJava
-    ### 7。内存泄漏
+    ### 内存泄漏
              LeakCanary
 
 
@@ -331,3 +330,4 @@
 # 七。算法&数据结构：2021-01-16～2021-01-31. 
 
 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
+'https://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@github.com/Rookierun/TravelInAndroid.git/'
