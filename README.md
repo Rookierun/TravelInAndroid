@@ -295,7 +295,30 @@
                 1.内置皮肤资源
                     主要思路就是在BaseActivity设置LayoutInflater.Factory，告诉系统使用我们自己的factory.createView方法，然后自定义
                     CustomAppCompatViewInflater继承自AppCompatViewInflater，通过拦截对应的tag，完成对指定view的换肤
+                2。加载apk中的皮肤包资源
+                    主要思路就是将apk中的资源，通过反射调用addAssetPath方法后，加入到Resource中，以便app可以访问到对应的资源文件
         4。mfactorySet置为false
+## 热门开源库源码分析
+    ### 1。网络
+        #### Retrofit
+        #### OKHttp
+    ### 2。数据库
+        #### GreenDao
+    ### 3。图片
+            #### Glide
+            #### Picasso
+            #### Fresco
+    ### 4。依赖注入
+            #### ButterKnife
+            #### Dagger2
+    ### 5。事件总线
+    #### EventBus
+    ### 6。响应式编程
+            #### RXJava
+    ### 7。内存泄漏
+            #### LeakCanary
+
+
 # 三。性能优化：2021-09-01～2021-09-30.
 
 # 四。ndk：2021-10-01～2021-11-15. 
