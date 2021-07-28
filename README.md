@@ -301,23 +301,23 @@
 
 ## 热门开源库源码分析
 ### 1.网络
-            Retrofit
-            OKHttp
-    ### 数据库
-            GreenDao
-    ### 图片
-            Glide
-            Picasso
-            Fresco
-    ### 依赖注入
-            ButterKnife
-            Dagger2
-    ### 事件总线
-            EventBus
-    ### 响应式编程
-             RXJava
-    ### 内存泄漏
-             LeakCanary
+    Retrofit
+    OKHttp
+### 数据库
+    GreenDao
+### 图片
+    Glide
+    Picasso
+    Fresco
+### 依赖注入
+    ButterKnife
+    Dagger2
+### 事件总线
+    EventBus
+### 响应式编程
+     RXJava
+### 内存泄漏
+     LeakCanary
 
 
 # 三。性能优化：2021-09-01～2021-09-30.
