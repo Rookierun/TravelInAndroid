@@ -301,22 +301,22 @@
 
 ## 热门开源库源码分析
 ### 1.网络
-    Retrofit
-    OKHttp
-### 数据库
+#### 1.1 Retrofit
+#### 1.2 OKHttp
+### 2.数据库
     GreenDao
-### 图片
-    Glide
-    Picasso
-    Fresco
-### 依赖注入
-    ButterKnife
-    Dagger2
-### 事件总线
+### 3.图片
+#### 3.1 Glide
+#### 3.2 Picasso
+#### 3.3 Fresco
+### 4.依赖注入
+#### 4.1 ButterKnife
+#### 4.2 Dagger2
+### 5.事件总线
     EventBus
-### 响应式编程
+### 6.响应式编程
      RXJava
-### 内存泄漏
+### 7.内存泄漏
      LeakCanary
 
 
