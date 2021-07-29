@@ -480,16 +480,15 @@
 
 # 七。算法&数据结构：2021-01-16～2021-01-31. 
 ## 01.数据结构&算法总览-->07-29
-数据结构
-### 一维数据结构
+#### 一维数据结构
     基础：数组array，链表linked-list
     高级：栈stack，队列queue，双端队列deque，集合list/set，映射map，
-### 二维数据结构
+#### 二维数据结构
     基础：树tree，图graph
     高级：二叉搜索树 binary-search-tree（red-black tree，AVL），堆heap，并查集 disjoint set 字典树 Trie
-### 特殊数据结构
+#### 特殊数据结构
     位运算，布隆过滤器，LRU
-算法
+####算法
     if-else ,switch->branch
     for,while-loop->Iteration
     递归Recursion（Divide&Conquer，Backtrace）
@@ -499,5 +498,5 @@
     贪心算法Greedy
     数学Math，几何Geometry
     注意：在头脑中会议上面几种算法的思想和代码模版
-算法题，做一遍远远不够
+### 算法题，做一遍远远不够
 
