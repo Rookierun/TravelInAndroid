@@ -313,7 +313,7 @@
 #### 4.1 ButterKnife
 #### 4.2 Dagger2
 ### 5.事件总线
-    EventBus
+    EventBus-->07-29
 ### 6.响应式编程
      RXJava
 ### 7.内存泄漏
@@ -329,6 +329,6 @@
 # 六。Flutter：2021-12-15～2021-01-15. 
 
 # 七。算法&数据结构：2021-01-16～2021-01-31. 
-
+## 01.数据结构&算法总览-->07-29
 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
 'https://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@github.com/Rookierun/TravelInAndroid.git/'
