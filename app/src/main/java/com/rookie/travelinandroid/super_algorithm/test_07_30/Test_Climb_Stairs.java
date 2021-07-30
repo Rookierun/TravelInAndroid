@@ -40,9 +40,9 @@ public class Test_Climb_Stairs {
     static HashMap<Integer, Integer> cachedMap = new HashMap<>();
 
     private static int climbStairsWithCache(int n) {
-        int f1 = 1;
-        int f2 = 2;
-        int f3 = 3;
+        if (n <= 3) {
+            return n;
+        }
         if (cachedMap.containsKey(n)){
             return cachedMap.get(n);
         }else {
