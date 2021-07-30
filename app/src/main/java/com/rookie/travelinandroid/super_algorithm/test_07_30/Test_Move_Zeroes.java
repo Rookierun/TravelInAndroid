@@ -1,6 +1,6 @@
 package com.rookie.travelinandroid.super_algorithm.test_07_30;
 
-public class Test {
+public class Test_Move_Zeroes {
     public static void main(String[] args) {
         moveZeroes();
     }
