@@ -23,6 +23,9 @@
         <activity android:name=".super_performance.PerformanceActivity" />
         <activity android:name=".super_structure.StructureActivity" />
         <activity android:name=".super_ui.UIActivity" />
+        <activity
+            android:name=".super_structure.ChangeSkinActivity"
+            android:configChanges="uiMode" />
     </application>
 
 </manifest>

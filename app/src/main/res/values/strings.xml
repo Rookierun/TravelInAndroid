@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TravelInAndroid</string>
+    <string name="custom_typeface_string">TravelInAndroid</string>
 </resources>

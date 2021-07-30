@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SkinnableTextView">
+        <attr name="android:textColor" />
+        <attr name="android:background" />
+        <attr name="custom_typeface" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SkinnableLinearLayout">
+        <attr name="android:background" />
+    </declare-styleable>
+</resources>
