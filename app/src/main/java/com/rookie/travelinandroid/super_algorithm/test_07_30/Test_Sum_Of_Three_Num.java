@@ -16,6 +16,7 @@ import java.util.Set;
  * <p>
  * 输入：nums = [-1,0,1,2,-1,-4]
  * 输出：[[-1,-1,2],[-1,0,1]]
+ *  参考：https://www.cnblogs.com/qxlxi/p/12860695.html
  */
 public class Test_Sum_Of_Three_Num {
     public static void main(String[] args) {
