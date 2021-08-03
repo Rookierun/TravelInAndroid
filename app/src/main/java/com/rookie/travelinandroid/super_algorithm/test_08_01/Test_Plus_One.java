@@ -20,7 +20,27 @@ package com.rookie.travelinandroid.super_algorithm.test_08_01;
  */
 public class Test_Plus_One {
     public static void main(String[] args) {
+        int [] nums={1,2,3,4};
+        plusOne(nums);
 
+    }
 
+    /**
+     * 最后一位，如果是9，那么+1则=10，进1位，然后进入前面一位继续判断是否为9.那么+1则=10，继续进位，如此循环
+     * @param nums
+     */
+    private static int[] plusOne(int[] nums) {
+        int length = nums.length;
+        for (int i = length-1; i >=0; i--) {
+           if (nums[i]==9){
+               nums[i]=0;
+           }else {
+                nums[i]+=1;
+                return nums;
+           }
+        }
+        nums=new int[nums.length+1];
+        nums[0]=1;
+        return nums;
     }
 }
