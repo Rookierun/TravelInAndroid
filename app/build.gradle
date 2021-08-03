@@ -12,6 +12,11 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ eventBusIndex : 'com.rookie.travelinandroid.MyEventBusIndex' ]
+            }
+        }
     }
 
     buildTypes {
@@ -19,6 +24,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -32,4 +41,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.google.code.gson:gson:2.8.7'
     api(project(":skin_lib"))
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    implementation(project(":my_annotation"))
+    annotationProcessor project(":my_compiler")
 }
