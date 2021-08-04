@@ -28,6 +28,68 @@ package com.rookie.travelinandroid.super_algorithm.test_08_01;
  */
 public class Test_Rotate_Array {
     public static void main(String[] args) {
+        int []nums={5,6,7,1,2,3,4};
+        int count =3;
+        rotateArray(nums,count);
+//        rotateArrByNew(nums,count);
+    }
 
+    /**
+     * 循环count，然后用nums[length-count]与nums[0]交换
+     * @param nums
+     * @param count
+     */
+    private static void rotateArray(int[] nums, int count) {
+        int start = count + 1;
+        int length=nums.length;
+        for (int i = start; i < nums.length; i++) {
+//            System.out.println(nums[i]);
+
+        }
+        int temp=-1;
+        for (int j = 0; j < length-1;j++) {
+
+            if (j==length-2){
+                //最后一个数字
+                nums[0]=nums[j];
+                printArr(nums);
+            }else{
+                if (temp!=-1){
+                    nums[j]=temp;
+                }else {
+                    temp=nums[j+1];
+                }
+                nums[j+1]=nums[j];
+
+                printArr(nums);
+                System.out.println("----------------------");
+            }
+        }
+        printArr(nums);
+    }
+    private static void rotateArrByNew(int [] nums,int count){
+        int length = nums.length;
+        int [] result=new int[length];
+        for (int i = 0; i < length; i++) {
+            result[(i+count)%length]=nums[i];
+        }
+        System.arraycopy(result,0,nums,0,length);
+        printArr(result);
+    }
+    private static void printArr(int[] nums){
+        StringBuffer buffer=new StringBuffer();
+        for (int i = 0; i < nums.length; i++) {
+            if (i==0){
+                buffer.append("[ ");
+            }
+            if (i!= nums.length-1){
+                buffer.append(nums[i]).append(",");
+            }
+            if (i==nums.length-1){
+                buffer.append(nums[i]);
+                buffer.append(" ]");
+            }
+        }
+        System.out.println(buffer.toString());
     }
 }
