@@ -47,6 +47,10 @@ public class Test_Rotate_Array {
 
         }
         int temp=-1;
+        int i=0;
+        while (i<length){
+
+        }
         for (int j = 0; j < length-1;j++) {
 
             if (j==length-2){
