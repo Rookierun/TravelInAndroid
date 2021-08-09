@@ -1,4 +1,4 @@
-package com.rookie.travelinandroid.super_algorithm.test_08_09.test_08_01;
+package com.rookie.travelinandroid.super_algorithm.test_08_09;
 
 import java.util.Arrays;
 import java.util.HashMap;
