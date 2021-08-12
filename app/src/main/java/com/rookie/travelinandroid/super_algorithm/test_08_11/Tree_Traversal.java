@@ -4,24 +4,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 94. 二叉树的中序遍历
- * 给定一个二叉树的根节点 root ，返回它的 中序 遍历。
- * <p>
- * 输入：root = [1,null,2,3]
- * 输出：[1,3,2]
- * https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
+ * 二叉树的遍历
  */
-public class Tree_InorderTraversal {
+public class Tree_Traversal {
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode();
         List<Integer> result = new ArrayList<>();
         inOrderTraversal(result, treeNode);
+        preOrderTraversal(result, treeNode);
+    }
+
+    /**
+     * 前序遍历
+     * 根左右
+     * https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
+     *
+     * @param result
+     * @param treeNode
+     */
+    private static void preOrderTraversal(List<Integer> result, TreeNode treeNode) {
+        if (treeNode == null) {
+            return;
+        }
+        result.add(treeNode.val);
+        preOrderTraversal(result, treeNode.leftChild);
+        preOrderTraversal(result, treeNode.rightChild);
     }
 
     /**
      * 中序遍历
      * 左-》根-》右
      * 递归
+     * 94. 二叉树的中序遍历
+     * * 给定一个二叉树的根节点 root ，返回它的 中序 遍历。
+     * * <p>
+     * * 输入：root = [1,null,2,3]
+     * * 输出：[1,3,2]
+     * * https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
      *
      * @param result
      * @param treeNode
