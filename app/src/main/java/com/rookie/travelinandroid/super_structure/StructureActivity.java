@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.rookie.travelinandroid.R;
+import com.rookie.travelinandroid.super_structure.event_bus.EventBusMainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -20,5 +21,9 @@ public class StructureActivity extends AppCompatActivity {
 
     public void changeSkin(View view) {
         startActivity(new Intent(this,ChangeSkinActivity.class));
+    }
+
+    public void checkEventBus(View view) {
+        startActivity(new Intent(this, EventBusMainActivity.class));
     }
 }

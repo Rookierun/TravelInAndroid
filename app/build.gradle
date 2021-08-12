@@ -47,4 +47,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
     implementation(project(":my_annotation"))
     annotationProcessor project(":my_compiler")
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
 }
