@@ -12,6 +12,23 @@ public class Tree_Traversal {
         List<Integer> result = new ArrayList<>();
         inOrderTraversal(result, treeNode);
         preOrderTraversal(result, treeNode);
+        postOrderTraversal(result, treeNode);
+    }
+
+    /**
+     * 后序遍历
+     * 左右根
+     *
+     * @param result
+     * @param treeNode
+     */
+    private static void postOrderTraversal(List<Integer> result, TreeNode treeNode) {
+        if (treeNode == null) {
+            return;
+        }
+        postOrderTraversal(result, treeNode.leftChild);
+        postOrderTraversal(result, treeNode.rightChild);
+        result.add(treeNode.val);
     }
 
     /**
