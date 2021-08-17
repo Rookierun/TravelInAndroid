@@ -1,19 +1,7 @@
-package com.rookie.travelinandroid.super_structure.okhttp;
-
-import androidx.appcompat.app.AppCompatActivity;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-import okhttp3.ResponseBody;
+package com.rookie.travelinandroid.super_structure.retrofit;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -24,8 +12,21 @@ import com.rookie.travelinandroid.R;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
-public class OKHttpActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+public class RetrofitActivity extends AppCompatActivity {
     OkHttpClient client = new OkHttpClient.Builder().build();
     private ImageView imageView;
 
@@ -40,18 +41,40 @@ public class OKHttpActivity extends AppCompatActivity {
     }
 
     public void testGet(View view) {
-        Runnable runnable = () -> {
-            Request syncRequest = new Request.Builder().url("https://www.baidu.com/").build();
-            Call call = client.newCall(syncRequest);
-            try {
-                Response response = call.execute();
-                String string = response.body().string();
-                Log.e("test", "response:" + string);
-            } catch (IOException e) {
-                e.printStackTrace();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                mockRequest();
             }
-        };
-        threadStart(runnable);
+        }).start();
+
+    }
+
+    private void mockRequest() {
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.github.com/")
+                .addConverterFactory(GsonConverterFactory.create()).build();
+        GitHubService service = retrofit.create(GitHubService.class);
+        retrofit2.Call<List<Repo>> rookieRun = service.listRepos("RookieRun");
+        try {
+            rookieRun.enqueue(new retrofit2.Callback<List<Repo>>() {
+                @Override
+                public void onResponse(retrofit2.Call<List<Repo>> call, retrofit2.Response<List<Repo>> response) {
+                    boolean successful = response.isSuccessful();
+                    if (successful) {
+                        int size = response.body().size();
+                        Log.e("test", Thread.currentThread().getName() + ",size:" + size);
+                    }
+                }
+
+                @Override
+                public void onFailure(retrofit2.Call<List<Repo>> call, Throwable t) {
+
+                }
+            });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void threadStart(Runnable runnable) {
@@ -109,7 +132,7 @@ public class OKHttpActivity extends AppCompatActivity {
                 if (body != null && body.contentLength() > 0) {
                     InputStream inputStream = body.byteStream();
                     Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                    OKHttpActivity.this.runOnUiThread(new Runnable() {
+                    RetrofitActivity.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             imageView.setImageBitmap(bitmap);
