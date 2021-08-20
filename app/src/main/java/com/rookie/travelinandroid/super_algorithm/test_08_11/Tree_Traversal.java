@@ -1,6 +1,7 @@
 package com.rookie.travelinandroid.super_algorithm.test_08_11;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -8,11 +9,37 @@ import java.util.List;
  */
 public class Tree_Traversal {
     public static void main(String[] args) {
-        TreeNode treeNode = new TreeNode();
+        TreeNode treeNode = new TreeNode(1);
+        treeNode.leftChild = new TreeNode(2);
+        treeNode.rightChild = new TreeNode(3);
         List<Integer> result = new ArrayList<>();
-        inOrderTraversal(result, treeNode);
-        preOrderTraversal(result, treeNode);
-        postOrderTraversal(result, treeNode);
+//        inOrderTraversal(result, treeNode);
+//        preOrderTraversal(result, treeNode);
+//        postOrderTraversal(result, treeNode);
+        layerOrderTraversal(treeNode);
+    }
+
+    /**
+     * 层序遍历
+     *
+     * @param treeNode
+     */
+    private static void layerOrderTraversal(TreeNode treeNode) {
+        LinkedList<TreeNode> linkedList = new LinkedList<>();
+        linkedList.add(treeNode);
+        while (!linkedList.isEmpty()) {
+            treeNode = linkedList.poll();
+            if (treeNode == null) {
+                continue;
+            }
+            System.out.println(treeNode.val+",");
+            if (treeNode.leftChild != null) {
+                linkedList.offer(treeNode.leftChild);
+            }
+            if (treeNode.rightChild != null) {
+                linkedList.offer(treeNode.rightChild);
+            }
+        }
     }
 
     /**
