@@ -8,7 +8,7 @@ import android.util.TypedValue;
 import com.rookie.travelinandroid.R;
 
 public class UiUtils {
-    public static float dp2Ppx(int dp) {
+    public static float dp2Ppx(float dp) {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, Resources.getSystem().getDisplayMetrics());
     }
 

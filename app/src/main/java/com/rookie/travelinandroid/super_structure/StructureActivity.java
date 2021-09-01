@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.rookie.travelinandroid.R;
 import com.rookie.travelinandroid.super_structure.event_bus.EventBusMainActivity;
+import com.rookie.travelinandroid.super_structure.glide.GlideActivity;
 import com.rookie.travelinandroid.super_structure.okhttp.OKHttpActivity;
 import com.rookie.travelinandroid.super_structure.retrofit.RetrofitActivity;
 
@@ -35,5 +36,8 @@ public class StructureActivity extends AppCompatActivity {
 
     public void checkRetrofit(View view) {
         startActivity(new Intent(this, RetrofitActivity.class));
+    }
+    public void checkGlide(View view) {
+        startActivity(new Intent(this, GlideActivity.class));
     }
 }
