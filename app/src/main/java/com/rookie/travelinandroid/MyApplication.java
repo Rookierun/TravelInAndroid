@@ -2,6 +2,8 @@ package com.rookie.travelinandroid;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Debug;
+import android.os.Trace;
 import android.util.Log;
 
 import com.github.moduth.blockcanary.BlockCanary;
@@ -16,7 +18,18 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        File file = new File(getExternalCacheDir(), "app.trace");
+        Log.e("test", "path:" + file.getPath());
+        Trace.beginSection("appliction onCreate");
+
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         BlockCanary.install(this, new AppBlockCanaryContext()).start();
+        Trace.endSection();
     }
 
     private static class AppBlockCanaryContext extends BlockCanaryContext {
