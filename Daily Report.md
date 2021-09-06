@@ -27,3 +27,9 @@
     3。app启动流程之：
          1。Launcher如何启动到目标应用的ActivityThread
          2。ActivityThread如何找到MainActivity并完成生命周期的回调
+### 2021-09-06
+    1。JVM虚拟机
+        1。Java内存模型
+        2。类加载
+        3。垃圾回收
+    2。Bitmap优化相关
