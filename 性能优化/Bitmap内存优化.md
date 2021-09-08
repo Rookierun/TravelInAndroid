@@ -228,6 +228,7 @@
     4。缩放压缩：
         1.缩放发使用的时通过矩阵对图片进行缩放
         2。缩放后的图片宽度，高度，以及占用内存都会变小，文件大小也会变小（指压缩后保存到本地的文件，原始文件不会改变）
+
             ```
                 private void testCompressScale() {
                     Bitmap bitmap = originalBitmap;
@@ -261,7 +262,9 @@
                     }
                 }
             ```
-            >2021-09-08 11:13:55.229 14704-14704/com.rookie.travelinandroid E/test: 下面是压缩前Bitmap的信息:
+
+            >
+            2021-09-08 11:13:55.229 14704-14704/com.rookie.travelinandroid E/test: 下面是压缩前Bitmap的信息:
              2021-09-08 11:13:55.229 14704-14704/com.rookie.travelinandroid E/test: bitmap info:
                  bitmapWidth:921
                  bitmapHeight:1313
@@ -305,7 +308,8 @@
                     }
                 }
         ```
-            >下面是压缩前Bitmap的信息:
+            >
+            下面是压缩前Bitmap的信息:
              2021-09-08 11:19:57.400 14898-14898/com.rookie.travelinandroid E/test: bitmap info:
                  bitmapWidth:921
                  bitmapHeight:1313
