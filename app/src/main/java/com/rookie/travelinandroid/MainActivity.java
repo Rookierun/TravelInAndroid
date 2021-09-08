@@ -8,6 +8,7 @@ import android.util.Log;
 import android.util.Printer;
 import android.view.View;
 
+import com.rookie.travelinandroid.super_performance.PerformanceActivity;
 import com.rookie.travelinandroid.super_structure.StructureActivity;
 import com.rookie.travelinandroid.super_ui.UIActivity;
 
@@ -62,5 +63,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void startStructure(View view) {
         startActivity(new Intent(this, StructureActivity.class));
+    }
+
+    public void startPerformance(View view) {
+        startActivity(new Intent(this, PerformanceActivity.class));
     }
 }
