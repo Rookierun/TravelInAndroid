@@ -41,7 +41,7 @@
     2。应用进程和根Activity启动流程--done
 ### 2021-09-09
     1。插件化和热修复
-        1。理解ActivityManagerService
+        1。理解ActivityManagerService--done
         2。热修复的产生
         3。Hook技术
         4。插件化原理
