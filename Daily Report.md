@@ -42,7 +42,7 @@
 ### 2021-09-09
     1。插件化和热修复
         1。理解ActivityManagerService--done
-        2。热修复的产生
+        2。热修复的产生---done
         3。Hook技术
         4。插件化原理
     2。View的绘制优化
