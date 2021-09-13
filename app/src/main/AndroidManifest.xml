@@ -3,6 +3,7 @@
     package="com.rookie.travelinandroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".super_structure.pulgin.PluginApplication"
@@ -35,6 +36,8 @@
             android:configChanges="uiMode" />
         <activity android:name=".super_structure.retrofit.RetrofitActivity" />
         <activity android:name=".super_structure.glide.GlideActivity" />
+        <activity android:name=".super_structure.plugin_netease.NetEaseProxyActivity" />
+        <activity android:name=".super_structure.plugin_netease.NetEaseMainActivity" />
     </application>
 
 </manifest>

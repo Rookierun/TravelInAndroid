@@ -1,3 +1,5 @@
+include ':plugin_package'
+include ':plugin_standard'
 include ':my_compiler'
 include ':my_annotation'
 include ':skin_lib'

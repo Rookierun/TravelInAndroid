@@ -9,7 +9,7 @@ public class PluginApplication extends Application {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         try {
-            HookHelper.hookAMS();
+//            HookHelper.hookAMS();
         } catch (Exception e) {
             Log.e("test","exception in hookAMS:"+e.getMessage());
         }
