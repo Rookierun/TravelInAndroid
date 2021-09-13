@@ -3,15 +3,18 @@
     package="com.rookie.travelinandroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
-        android:name=".MyApplication"
+        android:name=".super_structure.pulgin.PluginApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".super_structure.okhttp.OKHttpActivity"></activity>
+        <activity android:name=".super_structure.pulgin.PluginMainActivity"></activity>
+        <activity android:name=".super_structure.pulgin.StubActivity" />
+        <activity android:name=".super_structure.okhttp.OKHttpActivity" />
         <activity android:name=".super_structure.event_bus.EventBusMainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

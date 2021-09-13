@@ -33,27 +33,27 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
         setContentView(R.layout.activity_main);
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
-                .detectDiskWrites()
-                .detectAll()
-                .detectCustomSlowCalls()
-                .detectDiskReads()
-                .detectNetwork()
-                .detectResourceMismatches()
-                .detectUnbufferedIo()
-                .build();
-//        StrictMode.setThreadPolicy(policy);
-        File file = new File(getCacheDir().getAbsolutePath(), "test.txt ");
-        try {
-            file.createNewFile();
-            Thread.sleep(3000);
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            String text = "123";
-            fileOutputStream.write(text.getBytes());
-            fileOutputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+//                .detectDiskWrites()
+//                .detectAll()
+//                .detectCustomSlowCalls()
+//                .detectDiskReads()
+//                .detectNetwork()
+//                .detectResourceMismatches()
+//                .detectUnbufferedIo()
+//                .build();
+////        StrictMode.setThreadPolicy(policy);
+//        File file = new File(getCacheDir().getAbsolutePath(), "test.txt ");
+//        try {
+//            file.createNewFile();
+////            Thread.sleep(3000);
+//            FileOutputStream fileOutputStream = new FileOutputStream(file);
+//            String text = "123";
+//            fileOutputStream.write(text.getBytes());
+//            fileOutputStream.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
     }
 

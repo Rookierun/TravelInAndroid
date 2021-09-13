@@ -9,6 +9,7 @@ import com.rookie.travelinandroid.R;
 import com.rookie.travelinandroid.super_structure.event_bus.EventBusMainActivity;
 import com.rookie.travelinandroid.super_structure.glide.GlideActivity;
 import com.rookie.travelinandroid.super_structure.okhttp.OKHttpActivity;
+import com.rookie.travelinandroid.super_structure.pulgin.PluginMainActivity;
 import com.rookie.travelinandroid.super_structure.retrofit.RetrofitActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,5 +40,8 @@ public class StructureActivity extends AppCompatActivity {
     }
     public void checkGlide(View view) {
         startActivity(new Intent(this, GlideActivity.class));
+    }
+    public void checkPlugin(View view) {
+        startActivity(new Intent(this, PluginMainActivity.class));
     }
 }

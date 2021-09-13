@@ -166,7 +166,7 @@ public class PerformanceActivity extends AppCompatActivity {
                 .append("xdpi:").append(xdpi).append("\n")
                 .append("ydpi:").append(ydpi);
 
-//        Log.e("test", "device info:\n" + builder.toString());
+        Log.e("test", "device info:\n" + builder.toString());
 
         originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.nba);
         imageView.setImageBitmap(originalBitmap);
