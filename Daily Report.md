@@ -43,8 +43,8 @@
     1。插件化和热修复
         1。理解ActivityManagerService--done
         2。热修复的产生---done
-        3。Hook技术
-        4。插件化原理
+        3。Hook技术--done
+        4。插件化原理--not done
     2。View的绘制优化
 ### Flutter面试题/教程
 ### Kotlin 面试题/教程
