@@ -3,6 +3,7 @@ package com.rookie.travelinandroid.super_structure.plugin_netease;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.rookie.plugin_standard.ActivityInterface;
@@ -12,6 +13,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class NetEaseProxyActivity extends Activity {
     @Override
@@ -27,9 +29,10 @@ public class NetEaseProxyActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_proxy);
-        String className = getIntent().getStringExtra("className");
         try {
+//            setContentView(R.layout.activity_proxy);
+            String className = getIntent().getStringExtra("className");
+
             Class<?> aClass = getClassLoader().loadClass(className);
             Constructor<?> constructor = aClass.getConstructor(new Class[]{});
             Object o = constructor.newInstance(new Object[]{});
@@ -51,6 +54,8 @@ public class NetEaseProxyActivity extends Activity {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
+        } catch (Exception e) {
+            Log.e("test", "exception at NetEaseProxyActivity:" + e.getMessage());
         }
 
     }

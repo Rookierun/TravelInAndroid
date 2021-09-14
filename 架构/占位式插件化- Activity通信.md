@@ -25,3 +25,8 @@
         A:pluginActivity没有上下文环境，所以需要以来宿主的setContentView,故，需要重写Base Activity的setContentView,然后把具体工作交给AppActivity
     6.Unable to start activity ComponentInfo{com.rookie.travelinandroid/com.rookie.travelinandroid.super_structure.plugin_netease.NetEaseProxyActivity}: android.content.res.Resources$NotFoundException: Resource ID #0x7f0b001c
         A:插件的资源文件找不到，同5，需要依赖宿主的能力
+        问题应该是出现在了NetEaseProxyActivity的getResource方法的重写上，因为，不再重写这个方法就是ok的
+    7. You need to use a Theme.AppCompat theme (or descendant) with this activity.
+        A:继承自AppcompatActivity的Activity主题必须是Theme.AppCompat或者 其子类
+    8。总结：
+        昨天没办法打开的原因是：ProxyActivity里面写了setContentView，同时又重写了get Resource，插件里面并没有宿主的资源，所以就报错了

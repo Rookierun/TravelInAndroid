@@ -36,7 +36,9 @@
             android:configChanges="uiMode" />
         <activity android:name=".super_structure.retrofit.RetrofitActivity" />
         <activity android:name=".super_structure.glide.GlideActivity" />
-        <activity android:name=".super_structure.plugin_netease.NetEaseProxyActivity" />
+        <activity
+            android:name=".super_structure.plugin_netease.NetEaseProxyActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".super_structure.plugin_netease.NetEaseMainActivity" />
     </application>
 

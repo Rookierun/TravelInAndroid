@@ -3,6 +3,7 @@ package com.rookie.plugin_package;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.rookie.plugin_standard.ActivityInterface;
@@ -22,8 +23,8 @@ public class PluginBaseActivity extends Activity implements ActivityInterface {
         return appActivity.findViewById(id);
     }
 
-    @Override
     public void setContentView(int layoutResID) {
+        Log.e("test", "layoutResID:" + layoutResID);
         appActivity.setContentView(layoutResID);
     }
 
