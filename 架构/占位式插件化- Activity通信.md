@@ -13,7 +13,42 @@
     4。宿主Activity拿到targetClassName后，反射获取目标对象并启动
 ### 问题：
     1。@hide Google对反射的限制
+        1。关闭系统的弹框：
+            //解决9.0因为反射出现的提醒弹窗
+                private void closeAndroidPDialog(){
+                    try {
+                        Class aClass = Class.forName("android.content.pm.PackageParser$Package");
+                        Constructor declaredConstructor = aClass.getDeclaredConstructor(String.class);
+                        declaredConstructor.setAccessible(true);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        Class cls = Class.forName("android.app.ActivityThread");
+                        Method declaredMethod = cls.getDeclaredMethod("currentActivityThread");
+                        declaredMethod.setAccessible(true);
+                        Object activityThread = declaredMethod.invoke(null);
+                        Field mHiddenApiWarningShown = cls.getDeclaredField("mHiddenApiWarningShown");
+                        mHiddenApiWarningShown.setAccessible(true);
+                        mHiddenApiWarningShown.setBoolean(activityThread, true);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+        2。原因：
+                   Android9.0 后谷歌限制了开发者调用非官方公开API 方法或接口，
     2。A.class.newInstance与A.class.getConstructor.newInstance()的区别
+        A：
+            1.
+            Class.newInstance()只能反射无参构造
+            Constructor.newInstance（）可以反射任何构造器
+            2.
+            Class.newInstance()需要构造器可见
+            Constructor.newInstance()可以反射私有构造器
+            3。
+            Class.newInstance()对于捕获或者未捕获的异常均有构造器抛出
+            Constructor.newInstance()通常会把异常封装成InvocationTargetException 抛出
+
     3。Could not find method loadPlugin(View) in a parent or ancestor Context for android:onClick attribute defined on view class androidx.appcompat.widget.AppCompatButton
         A:Activity启动错了
     4。Error: Invoke-customs are only supported starting with Android O (--min-api 26)
