@@ -8,6 +8,7 @@ import android.view.View;
 import com.rookie.travelinandroid.R;
 import com.rookie.travelinandroid.super_structure.event_bus.EventBusMainActivity;
 import com.rookie.travelinandroid.super_structure.glide.GlideActivity;
+import com.rookie.travelinandroid.super_structure.hook.HookTestActivity;
 import com.rookie.travelinandroid.super_structure.okhttp.OKHttpActivity;
 import com.rookie.travelinandroid.super_structure.plugin_netease.NetEaseMainActivity;
 import com.rookie.travelinandroid.super_structure.pulgin.PluginMainActivity;
@@ -44,5 +45,8 @@ public class StructureActivity extends AppCompatActivity {
     }
     public void checkPlugin(View view) {
         startActivity(new Intent(this, NetEaseMainActivity.class));
+    }
+    public void checkHook(View view) {
+        startActivity(new Intent(this, HookTestActivity.class));
     }
 }

@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".super_structure.pulgin.PluginMainActivity"></activity>
+        <activity android:name=".super_structure.hook.HookTestActivity"></activity>
+        <activity android:name=".super_structure.pulgin.PluginMainActivity" />
         <activity android:name=".super_structure.pulgin.StubActivity" />
         <activity android:name=".super_structure.okhttp.OKHttpActivity" />
         <activity android:name=".super_structure.event_bus.EventBusMainActivity" />
