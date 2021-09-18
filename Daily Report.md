@@ -55,3 +55,13 @@
     2。手写占位式插件化框架-Service通信---done
     3。手写占位式插件化框架-动态广播的使用---done
     4。手写占位式插件化框架-APK解析原理系统源码分析---done
+·### 2021-09-18
+    1。Hook入门到熟练
+    2。Hook系统源码实现权限管理架构
+    3。手写Hook式插件化框架
+        1.Android类加载源码分析
+        2。App与插件融为一体
+        3。ActivityThread源码分析
+        4。自定义LoadedApk
+        5。绕过getPackageInfo检测
+        6。Android 9。0详解
